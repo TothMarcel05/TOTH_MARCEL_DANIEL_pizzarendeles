@@ -6,6 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    
+    {% if orders_ %}
+    <ul>
+    {% for order in orders %}
+        <li>{{ order.name }}</li>
+        <li>{{ order.phone }}</li>
+        <li>{{ order.size }}</li>
+        <li>{{ order.ham }}</li>
+        <li>{{ order.cheese }}</li>
+        <li>{{ order.mushroom }}</li>
+        <li>{{ order.measure }}</li>
+        <li>{{ order.time }}</li>
+        <li>{{ order.more }}</li>
+       
+    {% endfor %}
+    </ul>
+    {% endif %}
 </body>
 </html>
