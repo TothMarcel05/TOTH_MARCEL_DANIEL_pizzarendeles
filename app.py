@@ -14,13 +14,32 @@ def pizza_order():
     _name = request.form.get('name')
     _phone = request.form.get('phone')
     _size = request.form.get('size')
+    _ham = request.form.get('ham')
+    _cheese = request.form.get('cheese')
+    _mushroom = request.form.get('mushroom')
+    _measure = request.form.get('measure')
+    _time = request.form.get('time')
+    _more = request.form.get('more')
     order ={
-        'name': _name, 
-        'phone': _phone, 
-        'size': _size}
+        'name': _name,
+        'phone': _phone,
+        'size': _size,
+        'ham': _ham,
+        'cheese': _cheese,
+        'mushroom': _mushroom,
+        'measure': _measure,
+        'time': _time,
+        'more': _more}
+
         orders.append(order)
         print(orders)
     return render_template('pizza_order.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+        
+       
+
+
+ 
