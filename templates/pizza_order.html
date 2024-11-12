@@ -6,7 +6,40 @@
     <title>Pizza rendelési űrlap</title>
 </head>
 <body>
+
+    <form method="post">
+
+
+    
     <h1>Pizza rendelési űrlap</h1>
+    <fieldset>
+        <legend>Vevő adatai</legend>
+        Név:<input type="text" name="name" value="nev"><br><br>
+        Telefon:<input type="tel" name="phone" value="telefon"><br><br>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Pizza mérete</legend>
+        kicsi<input type="radio" name="size" required><br><br>
+        nagy<input type="radio" name="size" required><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Feltétek</legend>
+        sonka<input type="checkbox" name="sonka" value="sonka" required><br><br>
+        sajt<input type="checkbox" name="sajt" value="sajt" required><br><br>
+        gomba<input type="checkbox" name="gomba" value="gomba" required><br><br>
+    </fieldset>
+
+
+    Mennyiség:<input type="number" name="measure" required><br><br>
+    Kért szállítási idő:<input type="time" name="time" required><br><br>
+    Egyéb kívánságok<input type="text" name="more" required><br><br>
+
+    <button type="reset">Visszaállítás</button>
+    <button type="submit">Elküldés</button><br><br>
+    </form>
     <a href="/">Vissza a főoldalra</a>
 </body>
 </html>
