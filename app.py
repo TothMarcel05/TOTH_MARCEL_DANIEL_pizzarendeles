@@ -7,8 +7,19 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/pizza-order', methods=["GET"])
+@app.route('/pizza-order', methods=["GET", "POST"])
 def pizza_order():
+        if request.method == 'POST':
+    return render_template('index.html')
+    _name = request.form.get('name')
+    _phone = request.form.get('phone')
+    _size = request.form.get('size')
+    order ={
+        'name': _name, 
+        'phone': _phone, 
+        'size': _size}
+        orders.append(order)
+        print(orders)
     return render_template('pizza_order.html')
 
 if __name__ == "__main__":
