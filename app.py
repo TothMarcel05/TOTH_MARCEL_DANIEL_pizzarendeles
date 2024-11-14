@@ -3,6 +3,8 @@ from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__)
 
 orders = []
+order = []
+
 @app.route('/order-summary', methods=["GET"])
 def order_summary():
     return render_template('order_summary.html')
@@ -34,7 +36,6 @@ def pizza_order():
             'time': _time,
             'more': _more}
         orders.append(order)
-        print(orders)
     return render_template('pizza_order.html')
     
 
