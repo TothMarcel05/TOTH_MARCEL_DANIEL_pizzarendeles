@@ -5,6 +5,10 @@ app = Flask(__name__)
 orders = []
 order = []
 
+@app.route('/ordersummary', methods=["GET"])
+def ordersummary():
+    return render_template('pizza_order.html')
+
 @app.route('/order-summary', methods=["GET"])
 def order_summary():
     return render_template('order_summary.html', orders=orders)
