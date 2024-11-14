@@ -25,7 +25,7 @@ def pizza_order():
         _measure = request.form.get('measure')
         _time = request.form.get('time')
         _more = request.form.get('more')
-        order ={
+        order = {
             'name': _name,
             'phone': _phone,
             'size': _size,
