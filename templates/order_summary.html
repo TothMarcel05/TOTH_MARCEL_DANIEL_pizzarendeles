@@ -6,8 +6,6 @@
     <title>Rendelésed</title>
 </head>
 <body>
-
-
     {% if orders %}
     <ul>
     {% for order in orders %}
@@ -36,8 +34,9 @@
     Kért szállítási idő: {{ order.time }}<br><br>
     Egyéb kívánságok: {{ order.more }}<br><br>
     {% endfor %}
-    </ul>
+    
     {% endif %}
     <a href="/ordersummary">Vissza a pizza rendelési űrlaphoz</a><br><br>
+    </ul>
 </body>
 </html>
