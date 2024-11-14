@@ -6,20 +6,38 @@
     <title>Rendelésed</title>
 </head>
 <body>
+
+
     {% if orders %}
     <ul>
     {% for order in orders %}
-        <li>{{ order.name }}</li>
-        <li>{{ order.phone }}</li>
-        <li>{{ order.size }}</li>
+    <h1>Pizza rendelési űrlap (kitöltött)</h1>
+    <fieldset>
+        <legend>Adataid</legend>
+        Név: {{ order.name }}<br><br>
+        Telefon: {{ order.phone }}<br><br>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Pizza mérete</legend>
+        Méret: {{ order.size }}<br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Feltétek</legend>
         <li>{{ order.ham }}</li>
         <li>{{ order.cheese }}</li>
         <li>{{ order.mushroom }}</li>
-        <li>{{ order.measure }}</li>
-        <li>{{ order.time }}</li>
-        <li>{{ order.more }}</li>
+    </fieldset>
+
+
+    Mennyiség: {{ order.measure }}<br><br>
+    Kért szállítási idő: {{ order.time }}<br><br>
+    Egyéb kívánságok: {{ order.more }}<br><br>
     {% endfor %}
     </ul>
     {% endif %}
+
 </body>
 </html>
