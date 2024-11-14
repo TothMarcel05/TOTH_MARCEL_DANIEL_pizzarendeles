@@ -7,7 +7,7 @@ order = []
 
 @app.route('/order-summary', methods=["GET"])
 def order_summary():
-    return render_template('order_summary.html')
+    return render_template('order_summary.html', orders=orders)
 
 @app.route('/', methods=["GET"])
 def index():
