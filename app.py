@@ -3,6 +3,9 @@ from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__)
 
 orders = []
+@app.route('/order-summary', methods=["GET"])
+def order_summary():
+    return render_template('order_summary.html')
 
 @app.route('/', methods=["GET"])
 def index():
@@ -33,6 +36,7 @@ def pizza_order():
         orders.append(order)
         print(orders)
     return render_template('pizza_order.html')
+    
 
 if __name__ == "__main__":
     app.run(debug=True)
